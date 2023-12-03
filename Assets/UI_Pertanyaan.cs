@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class UI_Utility : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    private TextMeshProUGUI _text = null;
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField]
+    private bool _answer = false;
+
+    public void pilihJawaban()
     {
-        
+        Debug.Log($"Jawaban anda adalah {_text.text} (_answer))");
     }
 }
