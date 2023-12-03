@@ -1,18 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class UI_Utility : MonoBehaviour
+public class UI_Pertanyaan : MonoBehaviour
 {
     [SerializeField]
-    private TextMeshProUGUI _text = null;
-
+    private TextMeshProUGUI tempatTeks = null;
     [SerializeField]
-    private bool _answer = false;
+    private Image tempatGambar = null;
 
-    public void pilihJawaban()
+    // Start is called before the first frame update
+    void Start()
     {
-        Debug.Log($"Jawaban anda adalah {_text.text} (_answer))");
+        Debug.Log("Isi tempat text yaitu ");
+        Debug.Log(tempatTeks.text);
+    }
+
+    public void setPertanyaan(string textPertanyaan, Sprite petunjukGambar)
+    {
+        tempatGambar.sprite = petunjukGambar;
+        tempatTeks.text = textPertanyaan;
     }
 }
