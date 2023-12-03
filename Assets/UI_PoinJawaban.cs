@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class UI_PoinJawaban : MonoBehaviour
 {
     [SerializeField]
+    private UI_PesanLevel _tempatPesan = null;
+
+    [SerializeField]
     private TextMeshProUGUI _text = null;
 
     [SerializeField]
@@ -14,7 +17,8 @@ public class UI_PoinJawaban : MonoBehaviour
 
     public void pilihJawaban()
     {
-        Debug.Log($"Jawaban anda adalah {_text.text} ({_answer})");
+        _tempatPesan.Pesan = $"Jawaban anda adalah {_text.text} ({_answer})";
+        //Debug.Log($"Jawaban anda adalah {_text.text} ({_answer})");
     }
 
     public void setJawaban(string textJawaban, bool jawabannya)

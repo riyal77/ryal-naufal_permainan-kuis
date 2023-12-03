@@ -170,6 +170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 47335357}
+  - component: {fileID: 47335358}
   m_Layer: 5
   m_Name: Timer
   m_TagString: Untagged
@@ -198,6 +199,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &47335358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 47335356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e0970341036b7e4595e5258b88cb0fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _tempatPesan: {fileID: 1103387825}
+  _timeBar: {fileID: 139184022}
+  _waktuJawab: 30
 --- !u!1 &56070709
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,12 +239,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 56070709}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1103387824}
+  m_Father: {fileID: 141391960}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.45}
   m_AnchorMax: {x: 1, y: 0.7}
@@ -487,6 +503,97 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &141391959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 141391960}
+  - component: {fileID: 141391963}
+  - component: {fileID: 141391962}
+  - component: {fileID: 141391961}
+  m_Layer: 5
+  m_Name: Container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &141391960
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141391959}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 314850109}
+  - {fileID: 56070710}
+  - {fileID: 2008684655}
+  m_Father: {fileID: 1103387824}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &141391961
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141391959}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &141391962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141391959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &141391963
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141391959}
+  m_CullTransparentMesh: 1
 --- !u!1 &299756639
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,12 +694,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 314850108}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1103387824}
+  m_Father: {fileID: 141391960}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.3}
   m_AnchorMax: {x: 1, y: 0.7}
@@ -1034,10 +1141,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1178644783}
-        m_TargetAssemblyTypeName: Level_Manager, Assembly-CSharp
-        m_MethodName: NewLevel
-        m_Mode: 1
+      - m_Target: {fileID: 1103387823}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 47335358}
+        m_TargetAssemblyTypeName: UI_Timer, Assembly-CSharp
+        m_MethodName: set_WaktuBerjalan
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1096,6 +1215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bffe70b82c24a614fb5666f94e10eb7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tempatPesan: {fileID: 1103387825}
   _text: {fileID: 1623606065}
   _answer: 0
 --- !u!1 &740675308
@@ -1432,6 +1552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fda8cd885939ec4487c4f6f85607f70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempatLevel: {fileID: 1207759957}
   tempatTeks: {fileID: 1979107316}
   tempatGambar: {fileID: 1069526057}
 --- !u!1 &1064799634
@@ -1764,9 +1885,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 314850109}
-  - {fileID: 56070710}
-  - {fileID: 2008684655}
+  - {fileID: 141391960}
   m_Father: {fileID: 1064799638}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1786,6 +1905,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10b3f534839f8945bdb0ac657f88652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tempatPesan: {fileID: 56070711}
 --- !u!1 &1178644782
 GameObject:
   m_ObjectHideFlags: 0
@@ -2382,10 +2502,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1178644783}
-        m_TargetAssemblyTypeName: Level_Manager, Assembly-CSharp
-        m_MethodName: NewLevel
-        m_Mode: 1
+      - m_Target: {fileID: 1103387823}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 47335358}
+        m_TargetAssemblyTypeName: UI_Timer, Assembly-CSharp
+        m_MethodName: set_WaktuBerjalan
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2444,6 +2576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bffe70b82c24a614fb5666f94e10eb7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tempatPesan: {fileID: 1103387825}
   _text: {fileID: 618793813}
   _answer: 0
 --- !u!1 &1623606063
@@ -2580,37 +2713,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1623606063}
   m_CullTransparentMesh: 1
---- !u!1 &1628727810
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1628727811}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1628727811
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628727810}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.79764354, y: 1.2574081, z: 0.011020899}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1833271022
 GameObject:
   m_ObjectHideFlags: 0
@@ -2707,10 +2809,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1178644783}
-        m_TargetAssemblyTypeName: Level_Manager, Assembly-CSharp
-        m_MethodName: NewLevel
-        m_Mode: 1
+      - m_Target: {fileID: 1103387823}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 47335358}
+        m_TargetAssemblyTypeName: UI_Timer, Assembly-CSharp
+        m_MethodName: set_WaktuBerjalan
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2769,6 +2883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bffe70b82c24a614fb5666f94e10eb7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tempatPesan: {fileID: 1103387825}
   _text: {fileID: 2125334701}
   _answer: 0
 --- !u!1 &1847846160
@@ -2867,10 +2982,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1178644783}
-        m_TargetAssemblyTypeName: Level_Manager, Assembly-CSharp
-        m_MethodName: NewLevel
-        m_Mode: 1
+      - m_Target: {fileID: 1103387823}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 47335358}
+        m_TargetAssemblyTypeName: UI_Timer, Assembly-CSharp
+        m_MethodName: set_WaktuBerjalan
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2929,6 +3056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bffe70b82c24a614fb5666f94e10eb7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tempatPesan: {fileID: 1103387825}
   _text: {fileID: 740675310}
   _answer: 1
 --- !u!1 &1882228001
@@ -3013,7 +3141,55 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1882228004}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1178644783}
+        m_TargetAssemblyTypeName: Level_Manager, Assembly-CSharp
+        m_MethodName: NewLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1103387823}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 47335358}
+        m_TargetAssemblyTypeName: UI_Timer, Assembly-CSharp
+        m_MethodName: UlangiWaktu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 47335358}
+        m_TargetAssemblyTypeName: UI_Timer, Assembly-CSharp
+        m_MethodName: set_WaktuBerjalan
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1882228004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3412,14 +3588,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008684654}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1361075838}
   - {fileID: 1882228002}
-  m_Father: {fileID: 1103387824}
+  m_Father: {fileID: 141391960}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.3}
   m_AnchorMax: {x: 1, y: 0.45}
@@ -3441,8 +3617,8 @@ MonoBehaviour:
   m_Padding:
     m_Left: 200
     m_Right: 200
-    m_Top: 75
-    m_Bottom: 75
+    m_Top: 30
+    m_Bottom: 80
   m_ChildAlignment: 1
   m_Spacing: 250
   m_ChildForceExpandWidth: 1
@@ -3594,4 +3770,3 @@ SceneRoots:
   - {fileID: 1178644784}
   - {fileID: 1064799638}
   - {fileID: 1946530532}
-  - {fileID: 1628727811}
