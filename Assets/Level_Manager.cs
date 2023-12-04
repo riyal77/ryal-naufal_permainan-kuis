@@ -6,18 +6,8 @@ using UnityEngine.UI;
 
 public class Level_Manager : MonoBehaviour
 {
-    [System.Serializable]
-    public struct DataSoal
-    {
-        public string pertanyaan;
-        public Sprite hint;
-
-        public string[] pilihanJawaban;
-        public bool[] jawabanBenar;
-    }
-
     [SerializeField]
-    private DataSoal[] _soal = new DataSoal[0];
+    private Level_Pack _soal = null;
 
     [SerializeField]
     private UI_Pertanyaan tempatPertanyaan = null;
@@ -36,19 +26,21 @@ public class Level_Manager : MonoBehaviour
     {
         indexSoal++;
 
-        if (indexSoal >= _soal.Length)
+        if (indexSoal >= _soal._jumlahLevel)
         {
             indexSoal = 0;
         }
 
-        DataSoal soal = _soal[indexSoal];
+        Level_Soal soal = _soal.get_level(indexSoal);
 
         tempatPertanyaan.setPertanyaan($"Level {indexSoal + 1}", soal.pertanyaan, soal.hint);
 
         for (int i = 0; i < tempatPilihanJawaban.Length; i++)
         {
             UI_PoinJawaban poin = tempatPilihanJawaban[i];
-            poin.setJawaban(soal.pilihanJawaban[i], soal.jawabanBenar[i]);
+            Level_Soal.opsiJawaban opsi = soal._opsiJawaban[i];
+            poin.setJawaban(opsi.jawaban, opsi.jawabanBenar);
+            //poin.setJawaban(soal.pilihanJawaban[i], soal.jawabanBenar[i]);
         }
     }
 }

@@ -1935,31 +1935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3caae22e66b29a14ebb0efb93ae41b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _soal:
-  - pertanyaan: Bendera negara manakah ini?
-    hint: {fileID: 21300000, guid: e9d9408aab5f4cd419b029599a8a0e6b, type: 3}
-    pilihanJawaban:
-    - Senegal
-    - Kuwait
-    - Suriah
-    - Yaman
-    jawabanBenar: 00000001
-  - pertanyaan: Apa warna dari bunga mawar?
-    hint: {fileID: 21300000, guid: 9e7e02e7809cfa743ade8330fb2f4ec3, type: 3}
-    pilihanJawaban:
-    - Hijau
-    - Kuning
-    - Merah
-    - Katak
-    jawabanBenar: 00000100
-  - pertanyaan: Apa warna daun
-    hint: {fileID: 21300000, guid: 406c1c6f3eaade242ac0bcf4aa462e16, type: 3}
-    pilihanJawaban:
-    - Hijau
-    - mungkin saja
-    - Biru
-    - yang tidak mungkin
-    jawabanBenar: 01000000
+  _soal: {fileID: 11400000, guid: c1c01c92533458647ac394ea862cb706, type: 2}
   tempatPertanyaan: {fileID: 906553445}
   tempatPilihanJawaban:
   - {fileID: 1427661247}
