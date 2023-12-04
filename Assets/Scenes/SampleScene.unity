@@ -271,7 +271,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pesan dalam konsol ini tidak terlihat
+  m_text: Bakso k*nt*l, Bakso k*nt*l
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1936,22 +1936,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _soal:
-  - pertanyaan: Apa warna daun?
-    hint: {fileID: 21300000, guid: 406c1c6f3eaade242ac0bcf4aa462e16, type: 3}
+  - pertanyaan: Siapa nama ibumu?
+    hint: {fileID: 21300000, guid: 9e7e02e7809cfa743ade8330fb2f4ec3, type: 3}
     pilihanJawaban:
-    - Kuning
-    - Merah
-    - Hijau
-    - Bisa jadi
+    - Mungkinkah
+    - Mungkin Saja
+    - Tidak ada
+    - yang tidak mungkin
+    jawabanBenar: 01000000
+  - pertanyaan: Kamu di mana?
+    hint: {fileID: 21300000, guid: e0be8b4d65a8b9a438a4e40c9cae4e05, type: 3}
+    pilihanJawaban:
+    - Aku di sini
+    - Kamu di sana
+    - Ada perempuan cantik
+    - Bisa kamehameha
     jawabanBenar: 00000100
-  - pertanyaan: Bendera negara apakah ini?
-    hint: {fileID: 21300000, guid: e9d9408aab5f4cd419b029599a8a0e6b, type: 3}
-    pilihanJawaban:
-    - Senegal
-    - Kuwait
-    - Suriah
-    - Yaman
-    jawabanBenar: 00000001
   - pertanyaan: Apa warna dari bunga mawar?
     hint: {fileID: 21300000, guid: 9e7e02e7809cfa743ade8330fb2f4ec3, type: 3}
     pilihanJawaban:
@@ -1959,7 +1959,7 @@ MonoBehaviour:
     - Kuning
     - Merah
     - Katak
-    jawabanBenar: 00000100
+    jawabanBenar: 00010000
   tempatPertanyaan: {fileID: 906553445}
   tempatPilihanJawaban:
   - {fileID: 1427661247}
@@ -2329,7 +2329,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ulang
+  m_text: Bakso
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3353,7 +3353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lanjut
+  m_text: K*nt*l
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
