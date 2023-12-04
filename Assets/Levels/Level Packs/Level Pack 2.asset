@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: daa607aa04741f344beff2773f75f7dd, type: 3}
-  m_Name: Level Pack 1
+  m_Name: Level Pack 2
   m_EditorClassIdentifier: 
   _isiLevel:
-  - {fileID: 11400000, guid: dc5b3f3d0f255a347aa198cfb726ed31, type: 2}
+  - {fileID: 11400000, guid: c923e6ad329cead40891fedfdffbe6e1, type: 2}
   - {fileID: 11400000, guid: c41f76b2830ae75479a0d97924836487, type: 2}
+  - {fileID: 11400000, guid: dc5b3f3d0f255a347aa198cfb726ed31, type: 2}
   - {fileID: 11400000, guid: 7f01ca3bc5fe47b498596639baebf0ae, type: 2}
+  - {fileID: 11400000, guid: 4a578d97f4bc94a41828b3588e30252f, type: 2}
