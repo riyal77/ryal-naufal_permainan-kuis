@@ -54,6 +54,7 @@ public class Player_Progress : ScriptableObject
         var fileStream  = File.Open(filePath, FileMode.Open);
         var formatter   = new BinaryFormatter();
 
+        fileStream.Flush();
         formatter.Serialize(fileStream, _progressData);
         
         //Saves file using BinaryWriter
