@@ -47,14 +47,14 @@ public class Player_Progress : ScriptableObject
         }
 
         string isiData = $"Jumlah Koin : {_progressData.koin}\n";
-        File.WriteAllText(filePath, isiData);
 
         foreach (var i in _progressData.progressLevel)
         {
             Debug.Log(i);
-            isiData = $"{i}\n";
-            File.WriteAllText(filePath, isiData);
+            isiData += $"{i}\n";
         }
+
+        File.WriteAllText(filePath, isiData);
     }
 
     public void loadProgress()
