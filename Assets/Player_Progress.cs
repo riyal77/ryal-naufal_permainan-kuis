@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
@@ -36,7 +37,7 @@ public class Player_Progress : ScriptableObject
 
         string dirName = "Temporary";
         string dirPath = Application.dataPath + "/" + dirName;
-        string filePath = Application.dataPath + "/" + dirName + "/" + fileName;
+        string filePath = dirPath + "/" + fileName;
         
         if (!Directory.Exists(dirPath))
         {
@@ -84,8 +85,29 @@ public class Player_Progress : ScriptableObject
         File.WriteAllText(filePath, isiData);*/
     }
 
-    public void loadProgress()
+    public bool muatProgress()
     {
         //Loading players' progress
+        string dirName = "Temporary";
+        string dirPath = Application.dataPath + "/" + dirName;
+        string filePath = dirPath + "/" + fileName;
+
+        var fileStream  = File.Open(filePath, FileMode.Open);
+        
+        try {
+            var formatter   = new BinaryFormatter();
+
+            _progressData = (dataUtama)formatter.Deserialize(fileStream);
+            fileStream.Dispose();
+
+            Debug.Log($"Jumlah koin : {_progressData.koin}, {_progressData.progressLevel.Count}");
+            return true;
+        }
+        catch(System.Exception e) {
+            Debug.Log($"Gagal nih, {e.Message}");
+            
+            fileStream.Dispose();
+            return false;
+        }
     }
 }
