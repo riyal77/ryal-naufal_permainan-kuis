@@ -1935,6 +1935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3caae22e66b29a14ebb0efb93ae41b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerProgress: {fileID: 11400000, guid: 17ade292f3b75a94db9d28d53395cb8f, type: 2}
   _soal: {fileID: 11400000, guid: c1c01c92533458647ac394ea862cb706, type: 2}
   tempatPertanyaan: {fileID: 906553445}
   tempatPilihanJawaban:

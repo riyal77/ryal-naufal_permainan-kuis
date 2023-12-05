@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class Level_Manager : MonoBehaviour
 {
     [SerializeField]
+    private Player_Progress playerProgress = null;
+    
+    [SerializeField]
     private Level_Pack _soal = null;
 
     [SerializeField]
@@ -19,6 +22,7 @@ public class Level_Manager : MonoBehaviour
 
     void Start()
     {
+        playerProgress.simpanProgress();
         NewLevel();
     }
 
