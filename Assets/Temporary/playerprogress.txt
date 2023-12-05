@@ -1,0 +1,3 @@
+Jumlah koin : 200
+Level Pack 1, Level 3
+Level Pack 3, Level 5

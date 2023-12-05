@@ -18,9 +18,25 @@ public class Player_Progress : ScriptableObject
     public dataUtama _progressData = new dataUtama();
     public void simpanProgress()
     {
-        //Saving players' progress
-        string fileName = "contoh.txt";
-        string path = Application.dataPath + "/" + fileName;
+        //Sampel Data
+        _progressData.koin = 200;
+
+        if (_progressData.progressLevel == null)
+        {
+            _progressData.progressLevel = new();
+        }
+        _progressData.progressLevel.Add("Level Pack 1", 3);
+        _progressData.progressLevel.Add("Level Pack 3", 5);
+
+        string fileName = "playerprogress.txt";
+        string dirPath = Application.dataPath + "/Temporary";
+        string path =  dirPath + "/" + fileName;
+
+        if (!Directory.Exists(dirPath))
+        {
+            Directory.CreateDirectory(dirPath);
+            Debug.Log("Folder created : " + dirPath);
+        }
 
         if (!File.Exists(path))
         {
@@ -29,10 +45,15 @@ public class Player_Progress : ScriptableObject
         }
 
         //Saving data into the file
-        string _isiData = "Ini hanyalah percobaan";
-        File.WriteAllText(path, _isiData);
+        string _isiData = $"Jumlah koin : {_progressData.koin}\n";
 
-        Debug.Log("Data tersimpan di " + path);
+        foreach (var i in _progressData.progressLevel)
+        {
+            _isiData += $"{i.Key}, Level {i.Value}\n";
+            Debug.Log($"{i.Key}, Level {i.Value}");
+        }
+        
+        File.WriteAllText(path, _isiData);
     }
 
     public void loadProgress()
