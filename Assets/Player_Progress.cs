@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices.WindowsRuntime;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
 [CreateAssetMenu(
@@ -16,48 +18,52 @@ public class Player_Progress : ScriptableObject
     }
 
     public dataUtama _progressData = new dataUtama();
+
+    [SerializeField]
+    private string fileName = "playerprogress.txt";
+
     public void simpanProgress()
     {
-        //Sampel Data
-        _progressData.koin = 200;
+        //Saving players' progress
+        string fileName = "contoh.txt";
+        string path = Application.dataPath + "/" + fileName;
 
-        if (_progressData.progressLevel == null)
+        if (!File.Exists(filePath))
         {
-            _progressData.progressLevel = new();
-        }
-        _progressData.progressLevel.Add("Level Pack 1", 3);
-        _progressData.progressLevel.Add("Level Pack 3", 5);
-
-        string fileName = "playerprogress.txt";
-        string dirPath = Application.dataPath + "/Temporary";
-        string path =  dirPath + "/" + fileName;
-
-        if (!Directory.Exists(dirPath))
-        {
-            Directory.CreateDirectory(dirPath);
-            Debug.Log("Folder created : " + dirPath);
-        }
-
-        if (!File.Exists(path))
-        {
-            File.Create(path).Dispose();
-            Debug.Log("File created : " + path);
+            File.Create(filePath).Dispose();
+            Debug.Log(fileName + " file berhasil dibuat");
         }
 
         //Saving data into the file
-        string _isiData = $"Jumlah koin : {_progressData.koin}\n";
-
-        foreach (var i in _progressData.progressLevel)
-        {
-            _isiData += $"{i.Key}, Level {i.Value}\n";
-            Debug.Log($"{i.Key}, Level {i.Value}");
-        }
-        
+        string _isiData = "Ini hanyalah percobaan";
         File.WriteAllText(path, _isiData);
+
+        Debug.Log("Data tersimpan di " + path);
     }
 
-    public void loadProgress()
+    public bool muatProgress()
     {
         //Loading players' progress
+        string dirName = "Temporary";
+        string dirPath = Application.dataPath + "/" + dirName;
+        string filePath = dirPath + "/" + fileName;
+
+        var fileStream  = File.Open(filePath, FileMode.Open);
+        
+        try {
+            var formatter   = new BinaryFormatter();
+
+            _progressData = (dataUtama)formatter.Deserialize(fileStream);
+            fileStream.Dispose();
+
+            Debug.Log($"Jumlah koin : {_progressData.koin}, {_progressData.progressLevel.Count}");
+            return true;
+        }
+        catch(System.Exception e) {
+            Debug.Log($"Gagal nih, {e.Message}");
+            
+            fileStream.Dispose();
+            return false;
+        }
     }
 }
