@@ -25,8 +25,25 @@ public class Player_Progress : ScriptableObject
     public void simpanProgress()
     {
         //Saving players' progress
-        string fileName = "contoh.txt";
-        string path = Application.dataPath + "/" + fileName;
+        _progressData.koin = 200;
+
+        if (_progressData.progressLevel == null)
+        {
+            _progressData.progressLevel = new();
+        }
+
+        _progressData.progressLevel.Add("Level Pack 1", 3);
+        _progressData.progressLevel.Add("Level Pack 3", 5);
+
+        string dirName = "Temporary";
+        string dirPath = Application.dataPath + "/" + dirName;
+        string filePath = dirPath + "/" + fileName;
+        
+        if (!Directory.Exists(dirPath))
+        {
+            Directory.CreateDirectory(dirPath);
+            Debug.Log(dirName + " folder berhasil dibuat");
+        }
 
         if (!File.Exists(filePath))
         {
@@ -34,11 +51,38 @@ public class Player_Progress : ScriptableObject
             Debug.Log(fileName + " file berhasil dibuat");
         }
 
-        //Saving data into the file
-        string _isiData = "Ini hanyalah percobaan";
-        File.WriteAllText(path, _isiData);
+        //Saves file using BinaryFormatter
+        var fileStream  = File.Open(filePath, FileMode.Open);
+        var formatter   = new BinaryFormatter();
 
-        Debug.Log("Data tersimpan di " + path);
+        fileStream.Flush();
+        formatter.Serialize(fileStream, _progressData);
+        
+        //Saves file using BinaryWriter
+        /*var writer      = new BinaryWriter(fileStream);
+
+        writer.Write(_progressData.koin);
+
+        foreach (var i in _progressData.progressLevel)
+        {
+            writer.Write(i.Key);
+            writer.Write(i.Value);
+        }*/
+
+        //Closing the stream
+        //writer.Dispose();
+        fileStream.Dispose();
+
+        //Saves file in text, without BinaryWriter
+        /*string isiData = $"Jumlah Koin : {_progressData.koin}\n";
+
+        foreach (var i in _progressData.progressLevel)
+        {
+            Debug.Log(i);
+            isiData += $"{i}\n";
+        }
+
+        File.WriteAllText(filePath, isiData);*/
     }
 
     public bool muatProgress()
