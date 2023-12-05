@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
 [CreateAssetMenu(
@@ -16,6 +17,10 @@ public class Player_Progress : ScriptableObject
     }
 
     public dataUtama _progressData = new dataUtama();
+
+    [SerializeField]
+    private string fileName = "playerprogress.txt";
+
     public void simpanProgress()
     {
         //Saving players' progress
@@ -29,7 +34,6 @@ public class Player_Progress : ScriptableObject
         _progressData.progressLevel.Add("Level Pack 1", 3);
         _progressData.progressLevel.Add("Level Pack 3", 5);
 
-        string fileName = "playerprogress.txt";
         string dirName = "Temporary";
         string dirPath = Application.dataPath + "/" + dirName;
         string filePath = Application.dataPath + "/" + dirName + "/" + fileName;
@@ -46,7 +50,29 @@ public class Player_Progress : ScriptableObject
             Debug.Log(fileName + " file berhasil dibuat");
         }
 
-        string isiData = $"Jumlah Koin : {_progressData.koin}\n";
+        //Saves file using BinaryFormatter
+        var fileStream  = File.Open(filePath, FileMode.Open);
+        var formatter   = new BinaryFormatter();
+
+        formatter.Serialize(fileStream, _progressData);
+        
+        //Saves file using BinaryWriter
+        /*var writer      = new BinaryWriter(fileStream);
+
+        writer.Write(_progressData.koin);
+
+        foreach (var i in _progressData.progressLevel)
+        {
+            writer.Write(i.Key);
+            writer.Write(i.Value);
+        }*/
+
+        //Closing the stream
+        //writer.Dispose();
+        fileStream.Dispose();
+
+        //Saves file in text, without BinaryWriter
+        /*string isiData = $"Jumlah Koin : {_progressData.koin}\n";
 
         foreach (var i in _progressData.progressLevel)
         {
@@ -54,7 +80,7 @@ public class Player_Progress : ScriptableObject
             isiData += $"{i}\n";
         }
 
-        File.WriteAllText(filePath, isiData);
+        File.WriteAllText(filePath, isiData);*/
     }
 
     public void loadProgress()
