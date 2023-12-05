@@ -19,20 +19,42 @@ public class Player_Progress : ScriptableObject
     public void simpanProgress()
     {
         //Saving players' progress
-        string fileName = "contoh.txt";
-        string path = Application.dataPath + "/" + fileName;
+        _progressData.koin = 200;
 
-        if (!File.Exists(path))
+        if (_progressData.progressLevel == null)
         {
-            File.Create(path).Dispose();
-            Debug.Log("File created : " + path);
+            _progressData.progressLevel = new();
         }
 
-        //Saving data into the file
-        string _isiData = "Ini hanyalah percobaan";
-        File.WriteAllText(path, _isiData);
+        _progressData.progressLevel.Add("Level Pack 1", 3);
+        _progressData.progressLevel.Add("Level Pack 3", 5);
 
-        Debug.Log("Data tersimpan di " + path);
+        string fileName = "playerprogress.txt";
+        string dirName = "Temporary";
+        string dirPath = Application.dataPath + "/" + dirName;
+        string filePath = Application.dataPath + "/" + dirName + "/" + fileName;
+        
+        if (!Directory.Exists(dirPath))
+        {
+            Directory.CreateDirectory(dirPath);
+            Debug.Log(dirName + " folder berhasil dibuat");
+        }
+
+        if (!File.Exists(filePath))
+        {
+            File.Create(filePath).Dispose();
+            Debug.Log(fileName + " file berhasil dibuat");
+        }
+
+        string isiData = $"Jumlah Koin : {_progressData.koin}\n";
+        File.WriteAllText(filePath, isiData);
+
+        foreach (var i in _progressData.progressLevel)
+        {
+            Debug.Log(i);
+            isiData = $"{i}\n";
+            File.WriteAllText(filePath, isiData);
+        }
     }
 
     public void loadProgress()
