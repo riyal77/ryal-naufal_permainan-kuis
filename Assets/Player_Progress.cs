@@ -59,9 +59,9 @@ public class Player_Progress : ScriptableObject
         formatter.Serialize(fileStream, _progressData);
         
         //Saves file using BinaryWriter
-        /*var writer      = new BinaryWriter(fileStream);
+        //var writer      = new BinaryWriter(fileStream);
 
-        writer.Write(_progressData.koin);
+        /*writer.Write(_progressData.koin);
 
         foreach (var i in _progressData.progressLevel)
         {
@@ -92,8 +92,9 @@ public class Player_Progress : ScriptableObject
         string dirPath = Application.dataPath + "/" + dirName;
         string filePath = dirPath + "/" + fileName;
 
-        var fileStream  = File.Open(filePath, FileMode.Open);
+        var fileStream  = File.Open(filePath, FileMode.OpenOrCreate);
         
+        //Load file using BinaryFormatter
         try {
             var formatter   = new BinaryFormatter();
 
@@ -109,5 +110,40 @@ public class Player_Progress : ScriptableObject
             fileStream.Dispose();
             return false;
         }
+
+        //Loads save file using BinaryReader
+        /*var reader = new BinaryReader(fileStream);
+        try {
+            _progressData.koin = reader.ReadInt32();
+
+            if (_progressData.progressLevel == null)
+            {
+                _progressData.progressLevel = new();
+            }
+            
+            while (reader.PeekChar() != -1)
+            {
+                var levelPack = reader.ReadString();
+                var level     = reader.ReadInt32();
+                _progressData.progressLevel.Add(levelPack, level);
+                Debug.Log($"{levelPack}, Level {level}");
+            }
+
+            reader.Dispose();
+            fileStream.Dispose();
+
+            Debug.Log($"Memuat progress berhasil.\nJumlah koin : {_progressData.koin}, Jumlah level : {_progressData.progressLevel.Count}");
+            
+            return true;
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogException(e);
+
+            reader.Dispose();
+            fileStream.Dispose();
+
+            return false;
+        }*/
     }
 }
