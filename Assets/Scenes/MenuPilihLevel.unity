@@ -545,6 +545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df11fd0d23df554580769e95083d709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _kuisList: {fileID: 571985889}
   _tombolLevelPack: {fileID: -4906287671825895671, guid: c8a4c3f9b6fe1b54a8de59a227bbd509, type: 3}
   _content: {fileID: 1495197454}
   _levelPacks:

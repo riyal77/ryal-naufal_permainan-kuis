@@ -3,6 +3,9 @@ using UnityEngine;
 public class UI_LevelPackList : MonoBehaviour
 {
     [SerializeField]
+    private UI_LevelKuisList _kuisList = null;
+    
+    [SerializeField]
     private UI_OpsiLevelPack _tombolLevelPack = null;
 
     [SerializeField]
@@ -15,6 +18,9 @@ public class UI_LevelPackList : MonoBehaviour
     void Start()
     {
         LoadLevelPack();
+
+        //Subscribe event
+        UI_OpsiLevelPack.EventSaatKlik += UI_OpsiLevelPack_EventSaatKlik;
     }
 
     private void LoadLevelPack()
@@ -28,5 +34,18 @@ public class UI_LevelPackList : MonoBehaviour
             t.transform.SetParent(_content);
             t.transform.localScale = Vector3.one;
         }
+    }
+
+    private void UI_OpsiLevelPack_EventSaatKlik(Level_Pack levelPack)
+    {
+        _kuisList.gameObject.SetActive(true);
+        _kuisList.UnloadLevelPack(levelPack);
+        
+        gameObject.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        UI_OpsiLevelPack.EventSaatKlik -= UI_OpsiLevelPack_EventSaatKlik;
     }
 }

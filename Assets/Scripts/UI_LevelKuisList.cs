@@ -17,7 +17,7 @@ public class UI_LevelKuisList : MonoBehaviour
         UnloadLevelPack(_levelPack);
     }
 
-    private void UnloadLevelPack(Level_Pack level_pack)
+    public void UnloadLevelPack(Level_Pack level_pack)
     {
         for (int i = 0; i < level_pack._jumlahLevel; i++)
         {
