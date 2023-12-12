@@ -20,7 +20,7 @@ public class UI_OpsiLevelPack : MonoBehaviour
         }
     }
 
-    private void SetLevelPack(Level_Pack levelPack)
+    public void SetLevelPack(Level_Pack levelPack)
     {
         _packName.text = levelPack.name;
         _levelPack = levelPack;

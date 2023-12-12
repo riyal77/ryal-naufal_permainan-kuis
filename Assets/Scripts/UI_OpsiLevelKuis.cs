@@ -18,7 +18,7 @@ public class UI_OpsiLevelKuis : MonoBehaviour
         }
     }
 
-    private void SetLevelSoal(Level_Soal levelSoal)
+    public void SetLevelSoal(Level_Soal levelSoal)
     {
         _levelName.text = levelSoal.name;
         _levelSoal = levelSoal;

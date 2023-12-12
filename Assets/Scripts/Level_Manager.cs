@@ -17,6 +17,12 @@ public class Level_Manager : MonoBehaviour
 
     [SerializeField]
     private UI_PoinJawaban[] tempatPilihanJawaban = new UI_PoinJawaban[0];
+    
+    [SerializeField]
+    private GameSceneManager gameSceneManager = null;
+
+    [SerializeField]
+    private string sceneMenuLevel;
 
     private int indexSoal = -1;
 
@@ -36,7 +42,8 @@ public class Level_Manager : MonoBehaviour
 
         if (indexSoal >= _soal._jumlahLevel)
         {
-            indexSoal = 0;
+            gameSceneManager.BukaScene(sceneMenuLevel);
+            return;
         }
 
         Level_Soal soal = _soal.get_level(indexSoal);
