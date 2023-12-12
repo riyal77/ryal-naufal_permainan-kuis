@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 5810597486011032010}
   - component: {fileID: 8568947085071690985}
   - component: {fileID: 839069417782042879}
+  - component: {fileID: -4906287671825895671}
   m_Layer: 5
   m_Name: Tombol Level Pack 1
   m_TagString: Untagged
@@ -255,3 +256,17 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-4906287671825895671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3646144215458419340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8ffa05ca3b4bf347aecfbb6b7804f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _packName: {fileID: 888021093754145513}
+  _levelPack: {fileID: 11400000, guid: c1c01c92533458647ac394ea862cb706, type: 2}

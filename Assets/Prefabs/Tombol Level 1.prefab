@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8166587438374444555}
   - component: {fileID: 6277433319766348584}
   - component: {fileID: 3049524712020647742}
+  - component: {fileID: -1003781950042795495}
   m_Layer: 5
   m_Name: Tombol Level 1
   m_TagString: Untagged
@@ -121,6 +122,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-1003781950042795495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400438587055435085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01e60c6a52d3ede43a789573c023688e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _levelName: {fileID: 3288768865412838696}
+  _levelSoal: {fileID: 11400000, guid: dc5b3f3d0f255a347aa198cfb726ed31, type: 2}
 --- !u!1 &1433873068389955418
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,7 +228,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42
+  m_fontSize: 22
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

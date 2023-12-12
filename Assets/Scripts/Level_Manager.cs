@@ -22,10 +22,10 @@ public class Level_Manager : MonoBehaviour
 
     void Start()
     {
-        if (!playerProgress.muatProgress())
+        /*if (!playerProgress.muatProgress())
         {
             playerProgress.simpanProgress();
-        }
+        }*/
 
         NewLevel();
     }
