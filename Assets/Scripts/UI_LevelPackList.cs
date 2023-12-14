@@ -3,6 +3,9 @@ using UnityEngine;
 public class UI_LevelPackList : MonoBehaviour
 {
     [SerializeField]
+    private InisialDataGameplay _inisialData = null;
+
+    [SerializeField]
     private UI_LevelKuisList _kuisList = null;
     
     [SerializeField]
@@ -42,6 +45,8 @@ public class UI_LevelPackList : MonoBehaviour
         _kuisList.UnloadLevelPack(levelPack);
         
         gameObject.SetActive(false);
+
+        _inisialData.levelPack = levelPack;
     }
 
     private void OnDestroy()

@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5cd5ef107c0ca146a375df7bbbdb0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inisialData: {fileID: 11400000, guid: 60a2d874d343f7646a88d5e7b26716c0, type: 2}
   _tombolLevel: {fileID: -1003781950042795495, guid: 72388537f0bba224d892f87f53fda836, type: 3}
   _content: {fileID: 604029554}
   _levelPack: {fileID: 11400000, guid: c1c01c92533458647ac394ea862cb706, type: 2}
@@ -547,6 +548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6df11fd0d23df554580769e95083d709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inisialData: {fileID: 11400000, guid: 60a2d874d343f7646a88d5e7b26716c0, type: 2}
   _kuisList: {fileID: 571985889}
   _tombolLevelPack: {fileID: -4906287671825895671, guid: c8a4c3f9b6fe1b54a8de59a227bbd509, type: 3}
   _content: {fileID: 1495197454}
