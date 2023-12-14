@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class UI_OpsiLevelKuis : MonoBehaviour
 {
     // Start is called before the first frame update
+    public static event System.Action<int> EventSaatKlik;
+    
     [SerializeField]
     private Button _tombol = null;
 
@@ -18,7 +20,7 @@ public class UI_OpsiLevelKuis : MonoBehaviour
     {
         if (_levelSoal != null)
         {
-            SetLevelSoal(_levelSoal);
+            SetLevelSoal(_levelSoal, _levelSoal.levelIndex);
         }
 
         _tombol.onClick.AddListener(SaatKlik);
@@ -29,15 +31,17 @@ public class UI_OpsiLevelKuis : MonoBehaviour
         _tombol.onClick.RemoveListener(SaatKlik);
     }
 
-    public void SetLevelSoal(Level_Soal levelSoal)
+    public void SetLevelSoal(Level_Soal levelSoal, int index)
     {
         _levelName.text = levelSoal.name;
         _levelSoal = levelSoal;
+
+        _levelSoal.levelIndex = index;
     }
 
     private void SaatKlik()
     {
-        Debug.Log("WKWKWKWK!!!!!!!");
+        EventSaatKlik?.Invoke(_levelSoal.levelIndex);
     }
 
 }

@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pertanyaan: Apa warna laut?
   hint: {fileID: 21300000, guid: c997c64a5720d2b44af5a510da1e73fa, type: 3}
+  levelIndex: 0
   _opsiJawaban:
   - jawaban: Hijau
-    jawabanBenar: 1
+    jawabanBenar: 0
   - jawaban: Daun
     jawabanBenar: 0
   - jawaban: Biru

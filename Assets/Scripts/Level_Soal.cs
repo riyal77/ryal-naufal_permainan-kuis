@@ -14,6 +14,7 @@ public class Level_Soal : ScriptableObject
     }
     public string pertanyaan;
     public Sprite hint;
+    public int levelIndex = 0;
 
     public opsiJawaban[] _opsiJawaban = new opsiJawaban[0];
 }
