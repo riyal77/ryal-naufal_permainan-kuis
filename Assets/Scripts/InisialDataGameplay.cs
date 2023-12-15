@@ -8,4 +8,13 @@ public class InisialDataGameplay : ScriptableObject
 {
     public Level_Pack levelPack = null;
     public int levelIndex = 0;
+
+    [SerializeField]
+    private bool _saatKalah = false;
+
+    public bool SaatKalah
+    {
+        get => _saatKalah;
+        set => _saatKalah = value;
+    }
 }

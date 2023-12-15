@@ -22,6 +22,11 @@ public class UI_LevelPackList : MonoBehaviour
     {
         LoadLevelPack();
 
+        if (_inisialData.SaatKalah)
+        {
+            UI_OpsiLevelPack_EventSaatKlik(_inisialData.levelPack);
+        }
+
         //Subscribe event
         UI_OpsiLevelPack.EventSaatKlik += UI_OpsiLevelPack_EventSaatKlik;
     }

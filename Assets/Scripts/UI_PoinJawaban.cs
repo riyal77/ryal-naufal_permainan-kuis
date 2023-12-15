@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,8 +7,9 @@ using UnityEngine.UI;
 
 public class UI_PoinJawaban : MonoBehaviour
 {
-    [SerializeField]
-    private UI_PesanLevel _tempatPesan = null;
+    //[SerializeField]
+    //private UI_PesanLevel _tempatPesan = null;
+    public static event Action<string, bool> EventJawabSoal;
 
     [SerializeField]
     private TextMeshProUGUI _text = null;
@@ -17,8 +19,9 @@ public class UI_PoinJawaban : MonoBehaviour
 
     public void pilihJawaban()
     {
-        _tempatPesan.Pesan = $"Jawaban anda adalah {_text.text} ({_answer})";
+        //_tempatPesan.Pesan = $"Jawaban anda adalah {_text.text} ({_answer})";
         //Debug.Log($"Jawaban anda adalah {_text.text} ({_answer})");
+        EventJawabSoal?.Invoke(_text.text, _answer);
     }
 
     public void setJawaban(string textJawaban, bool jawabannya)
