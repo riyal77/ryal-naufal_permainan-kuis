@@ -40,6 +40,19 @@ public class Level_Manager : MonoBehaviour
         indexSoal = _inisialData.levelIndex - 1;
 
         NewLevel();
+
+        // Subscribe event baru
+        UI_PoinJawaban.EventJawabSoal += UI_PoinJawaban_EventJawabSoal;
+    }
+
+    private void OnDestroy()
+    {
+        UI_PoinJawaban.EventJawabSoal -= UI_PoinJawaban_EventJawabSoal;
+    }
+
+    private void OnAppliationQuit()
+    {
+        _inisialData.SaatKalah = false;
     }
 
     public void NewLevel()
@@ -62,6 +75,14 @@ public class Level_Manager : MonoBehaviour
             Level_Soal.opsiJawaban opsi = soal._opsiJawaban[i];
             poin.setJawaban(opsi.jawaban, opsi.jawabanBenar);
             //poin.setJawaban(soal.pilihanJawaban[i], soal.jawabanBenar[i]);
+        }
+    }
+
+    private void UI_PoinJawaban_EventJawabSoal(string text, bool answer)
+    {
+        if (answer)
+        {
+            playerProgress._progressData.koin += 20;
         }
     }
 }
