@@ -22,21 +22,25 @@ public class Player_Progress : ScriptableObject
     [SerializeField]
     private string fileName = "playerprogress.txt";
 
+    [SerializeField]
+    private string _startingLevelPackName = string.Empty;
+
     public void simpanProgress()
     {
-        //Saving players' progress
-        _progressData.koin = 200;
-
         if (_progressData.progressLevel == null)
         {
             _progressData.progressLevel = new();
+            _progressData.koin = 0;
+            _progressData.progressLevel.Add(_startingLevelPackName, 1);
         }
 
-        _progressData.progressLevel.Add("Level Pack 1", 3);
-        _progressData.progressLevel.Add("Level Pack 3", 5);
-
         string dirName = "Temporary";
+        
+#if UNITY_EDITOR
         string dirPath = Application.dataPath + "/" + dirName;
+#elif (UNITY_ANDROID || UNITY_IOS) && !UNITY_EDITOR
+        string dirPath = Application.persistentDataPath + "/" + dirName;
+#endif
         string filePath = dirPath + "/" + fileName;
         
         if (!Directory.Exists(dirPath))

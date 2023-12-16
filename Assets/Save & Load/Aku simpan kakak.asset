@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _progressData:
     koin: 0
+  fileName: playerprogress.txt
+  _startingLevelPackName: Level Pack 1

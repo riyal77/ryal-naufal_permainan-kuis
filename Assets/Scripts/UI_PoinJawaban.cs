@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class UI_PoinJawaban : MonoBehaviour
 {
-    //[SerializeField]
-    //private UI_PesanLevel _tempatPesan = null;
     public static event Action<string, bool> EventJawabSoal;
 
     [SerializeField]
@@ -19,8 +17,6 @@ public class UI_PoinJawaban : MonoBehaviour
 
     public void pilihJawaban()
     {
-        //_tempatPesan.Pesan = $"Jawaban anda adalah {_text.text} ({_answer})";
-        //Debug.Log($"Jawaban anda adalah {_text.text} ({_answer})");
         EventJawabSoal?.Invoke(_text.text, _answer);
     }
 
