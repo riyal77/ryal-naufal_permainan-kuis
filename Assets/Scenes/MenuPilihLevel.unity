@@ -1334,10 +1334,6 @@ MonoBehaviour:
   _kuisList: {fileID: 571985889}
   _tombolLevelPack: {fileID: -4906287671825895671, guid: c8a4c3f9b6fe1b54a8de59a227bbd509, type: 3}
   _content: {fileID: 1495197454}
-  _levelPacks:
-  - {fileID: 11400000, guid: c1c01c92533458647ac394ea862cb706, type: 2}
-  - {fileID: 11400000, guid: 450742c95067f0543af1c55953a8de24, type: 2}
-  - {fileID: 11400000, guid: 05c524fb493662442834934dd7a5c352, type: 2}
 --- !u!1 &1278583122
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,6 +1423,7 @@ GameObject:
   - component: {fileID: 1295920540}
   - component: {fileID: 1295920542}
   - component: {fileID: 1295920541}
+  - component: {fileID: 1295920543}
   m_Layer: 5
   m_Name: Konsol Pembelian Level
   m_TagString: Untagged
@@ -1493,6 +1490,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295920539}
   m_CullTransparentMesh: 1
+--- !u!114 &1295920543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295920539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb974c6ac20425f4fb4ca34c4f9c6cb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 17ade292f3b75a94db9d28d53395cb8f, type: 2}
+  pesanCukupCoin: {fileID: 1278583122}
+  pesanTakCukupCoin: {fileID: 1476472739}
 --- !u!1 &1297417269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,7 +1785,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1478530711}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1295920539}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1478530711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1899,7 +1923,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1667821801}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1295920539}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1667821801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2257,9 +2293,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f3b69cdafb5de74da80efea974f8ce2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelPackList: {fileID: 1244565086}
   playerProgress: {fileID: 11400000, guid: 17ade292f3b75a94db9d28d53395cb8f, type: 2}
   textCoin: {fileID: 593980457}
-  _inisialData: {fileID: 11400000, guid: 60a2d874d343f7646a88d5e7b26716c0, type: 2}
+  inisialData: {fileID: 0}
+  levelPacks:
+  - {fileID: 11400000, guid: c1c01c92533458647ac394ea862cb706, type: 2}
+  - {fileID: 11400000, guid: 450742c95067f0543af1c55953a8de24, type: 2}
+  - {fileID: 11400000, guid: 05c524fb493662442834934dd7a5c352, type: 2}
 --- !u!4 &2135782348
 Transform:
   m_ObjectHideFlags: 0

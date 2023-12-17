@@ -4,13 +4,22 @@ using UnityEngine.UI;
 
 public class UI_OpsiLevelPack : MonoBehaviour
 {
-    public static event System.Action<Level_Pack> EventSaatKlik;
+    public static event System.Action<Level_Pack, bool> EventSaatKlik;
     // Start is called before the first frame update
     [SerializeField]
     private Button _tombol = null;
 
     [SerializeField]
     private TextMeshProUGUI _packName = null;
+
+    [SerializeField]
+    private TextMeshProUGUI _labelTerkunci = null;
+
+    [SerializeField]
+    private TextMeshProUGUI _labelHarga = null;
+
+    [SerializeField]
+    private bool _terkunci = false;
 
     [SerializeField]
     private Level_Pack _levelPack = null;
@@ -25,19 +34,34 @@ public class UI_OpsiLevelPack : MonoBehaviour
         _tombol.onClick.AddListener(SaatKlik);
     }
 
+    void OnDestroy()
+    {
+        _tombol.onClick.RemoveListener(SaatKlik);
+    }
+
     public void SetLevelPack(Level_Pack levelPack)
     {
         _packName.text = levelPack.name;
         _levelPack = levelPack;
     }
 
-    private void SaatKlik()
+    public void KunciLevelPack()
     {
-        EventSaatKlik?.Invoke(_levelPack);
+        _terkunci = true;
+        _labelTerkunci.gameObject.SetActive(true);
+        _labelHarga.transform.parent.gameObject.SetActive(true);
+        _labelHarga.text = $"{_levelPack.Harga}";
     }
 
-    void OnDestroy()
+    public void BukaLevelPack()
     {
-        _tombol.onClick.RemoveListener(SaatKlik);
+        _terkunci = false;
+        _labelTerkunci.gameObject.SetActive(false);
+        _labelHarga.transform.parent.gameObject.SetActive(false);
+    }
+
+    private void SaatKlik()
+    {
+        EventSaatKlik?.Invoke(_levelPack, _terkunci);
     }
 }

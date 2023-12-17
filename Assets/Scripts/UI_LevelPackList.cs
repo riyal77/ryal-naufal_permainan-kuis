@@ -13,27 +13,22 @@ public class UI_LevelPackList : MonoBehaviour
 
     [SerializeField]
     private RectTransform _content = null;
-
-    [Space, SerializeField]
-    private Level_Pack[] _levelPacks = new Level_Pack[0];
     
     // Start is called before the first frame update
     void Start()
     {
-        LoadLevelPack();
-
         if (_inisialData.SaatKalah)
         {
-            UI_OpsiLevelPack_EventSaatKlik(_inisialData.levelPack);
+            UI_OpsiLevelPack_EventSaatKlik(_inisialData.levelPack, false);
         }
 
         //Subscribe event
         UI_OpsiLevelPack.EventSaatKlik += UI_OpsiLevelPack_EventSaatKlik;
     }
 
-    private void LoadLevelPack()
+    public void LoadLevelPack(Level_Pack[] levelPack, Player_Progress.dataUtama playerData)
     {
-        foreach(var lp in _levelPacks)
+        foreach(var lp in levelPack)
         {
             var t = Instantiate(_tombolLevelPack);
             
@@ -41,11 +36,20 @@ public class UI_LevelPackList : MonoBehaviour
 
             t.transform.SetParent(_content);
             t.transform.localScale = Vector3.one;
+
+            if (!playerData.progressLevel.ContainsKey(lp.name))
+            {
+                t.KunciLevelPack();
+            }
         }
     }
 
-    private void UI_OpsiLevelPack_EventSaatKlik(Level_Pack levelPack)
+    private void UI_OpsiLevelPack_EventSaatKlik(Level_Pack levelPack, bool terkunci)
     {
+        if (terkunci)
+        {
+            return;
+        }
         _kuisList.gameObject.SetActive(true);
         _kuisList.UnloadLevelPack(levelPack);
         
