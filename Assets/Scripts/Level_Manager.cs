@@ -27,6 +27,15 @@ public class Level_Manager : MonoBehaviour
     [SerializeField]
     private string sceneMenuLevel;
 
+    [SerializeField]
+    private PemanggilSuara pemanggilSuara = null;
+
+    [SerializeField]
+    private AudioClip suaraMenang = null;
+
+    [SerializeField]
+    private AudioClip suaraKalah = null;
+
     private int indexSoal = -1;
 
     void Start()
@@ -76,6 +85,8 @@ public class Level_Manager : MonoBehaviour
 
     private void UI_PoinJawaban_EventJawabSoal(string text, bool answer)
     {
+        pemanggilSuara.PanggilSuara(answer ? suaraMenang : suaraKalah);
+        
         if (answer)
         {
             string namaLevelPack = _inisialData.levelPack.name;
