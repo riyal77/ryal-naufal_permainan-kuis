@@ -35,6 +35,7 @@ public class Level_Manager : MonoBehaviour
         indexSoal = _inisialData.levelIndex - 1;
 
         NewLevel();
+        AudioManager.instance.PlayBGM(1);
 
         // Subscribe event baru
         UI_PoinJawaban.EventJawabSoal += UI_PoinJawaban_EventJawabSoal;
