@@ -18,4 +18,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dc5b3f3d0f255a347aa198cfb726ed31, type: 2}
   - {fileID: 11400000, guid: 7f01ca3bc5fe47b498596639baebf0ae, type: 2}
   - {fileID: 11400000, guid: 4a578d97f4bc94a41828b3588e30252f, type: 2}
-  _harga: 0
+  _harga: 100

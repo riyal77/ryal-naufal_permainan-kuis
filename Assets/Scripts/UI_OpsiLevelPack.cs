@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class UI_OpsiLevelPack : MonoBehaviour
 {
-    public static event System.Action<Level_Pack, bool> EventSaatKlik;
+    public static event System.Action<UI_OpsiLevelPack, Level_Pack, bool> EventSaatKlik;
     // Start is called before the first frame update
     [SerializeField]
     private Button _tombol = null;
@@ -62,6 +62,6 @@ public class UI_OpsiLevelPack : MonoBehaviour
 
     private void SaatKlik()
     {
-        EventSaatKlik?.Invoke(_levelPack, _terkunci);
+        EventSaatKlik?.Invoke(this, _levelPack, _terkunci);
     }
 }

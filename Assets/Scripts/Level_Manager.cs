@@ -31,11 +31,6 @@ public class Level_Manager : MonoBehaviour
 
     void Start()
     {
-        /*if (!playerProgress.muatProgress())
-        {
-            playerProgress.simpanProgress();
-        }*/
-
         _soal = _inisialData.levelPack;
         indexSoal = _inisialData.levelIndex - 1;
 
@@ -82,7 +77,16 @@ public class Level_Manager : MonoBehaviour
     {
         if (answer)
         {
-            playerProgress._progressData.koin += 20;
+            string namaLevelPack = _inisialData.levelPack.name;
+            int levelTerakhir = playerProgress._progressData.progressLevel[namaLevelPack];
+
+            if (indexSoal + 2 > levelTerakhir)
+            {
+                playerProgress._progressData.koin += 20;
+                playerProgress._progressData.progressLevel[namaLevelPack] = indexSoal + 2;
+
+                playerProgress.simpanProgress();
+            }
         }
     }
 }

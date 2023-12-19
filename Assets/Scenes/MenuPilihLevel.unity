@@ -307,6 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5cd5ef107c0ca146a375df7bbbdb0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerProgress: {fileID: 11400000, guid: 17ade292f3b75a94db9d28d53395cb8f, type: 2}
   _inisialData: {fileID: 11400000, guid: 60a2d874d343f7646a88d5e7b26716c0, type: 2}
   _tombolLevel: {fileID: -1003781950042795495, guid: 72388537f0bba224d892f87f53fda836, type: 3}
   _content: {fileID: 604029554}
@@ -1502,6 +1503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb974c6ac20425f4fb4ca34c4f9c6cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempatKoin: {fileID: 593980457}
   playerData: {fileID: 11400000, guid: 17ade292f3b75a94db9d28d53395cb8f, type: 2}
   pesanCukupCoin: {fileID: 1278583122}
   pesanTakCukupCoin: {fileID: 1476472739}
@@ -1587,7 +1589,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1297417272}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1295920543}
+        m_TargetAssemblyTypeName: UI_PesanKonfirmasiMenu, Assembly-CSharp
+        m_MethodName: BukaLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1295920539}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1297417272
 MonoBehaviour:
   m_ObjectHideFlags: 0

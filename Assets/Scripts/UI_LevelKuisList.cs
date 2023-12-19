@@ -4,6 +4,9 @@ using UnityEngine;
 public class UI_LevelKuisList : MonoBehaviour
 {
     [SerializeField]
+    private Player_Progress _playerProgress = null;
+    
+    [SerializeField]
     private InisialDataGameplay _inisialData = null;
 
     [SerializeField]
@@ -34,6 +37,8 @@ public class UI_LevelKuisList : MonoBehaviour
     public void UnloadLevelPack(Level_Pack level_pack)
     {
         HapusIsiContent();
+
+        var levelTerbukaTerakhir = _playerProgress._progressData.progressLevel[level_pack.name] - 1;
         
         for (int i = 0; i < level_pack._jumlahLevel; i++)
         {
@@ -43,6 +48,11 @@ public class UI_LevelKuisList : MonoBehaviour
 
             t.transform.SetParent(_content);
             t.transform.localScale = Vector3.one;
+
+            if (i > levelTerbukaTerakhir)
+            {
+                t.TombolInteraksi = false;
+            }
         }
     }
 

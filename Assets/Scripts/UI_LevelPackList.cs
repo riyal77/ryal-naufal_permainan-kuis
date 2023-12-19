@@ -19,7 +19,7 @@ public class UI_LevelPackList : MonoBehaviour
     {
         if (_inisialData.SaatKalah)
         {
-            UI_OpsiLevelPack_EventSaatKlik(_inisialData.levelPack, false);
+            UI_OpsiLevelPack_EventSaatKlik(null, _inisialData.levelPack, false);
         }
 
         //Subscribe event
@@ -44,7 +44,7 @@ public class UI_LevelPackList : MonoBehaviour
         }
     }
 
-    private void UI_OpsiLevelPack_EventSaatKlik(Level_Pack levelPack, bool terkunci)
+    private void UI_OpsiLevelPack_EventSaatKlik(UI_OpsiLevelPack tombolLevelPack, Level_Pack levelPack, bool terkunci)
     {
         if (terkunci)
         {
