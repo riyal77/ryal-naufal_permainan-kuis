@@ -6,6 +6,9 @@ public class UI_PesanLevel : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField]
+    private Animator _animator = null;
+
+    [SerializeField]
     private GameObject _menuOpsiMenang = null;
 
     [SerializeField]
@@ -61,5 +64,7 @@ public class UI_PesanLevel : MonoBehaviour
             _menuOpsiMenang.SetActive(false);
             _menuOpsiKalah.SetActive(true);
         }
+
+        _animator.SetBool("Benar", answer);
     }
 }

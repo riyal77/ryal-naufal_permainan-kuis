@@ -2234,6 +2234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1103387824}
   - component: {fileID: 1103387825}
+  - component: {fileID: 1103387826}
   m_Layer: 5
   m_Name: Pesan Konsol
   m_TagString: Untagged
@@ -2273,9 +2274,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10b3f534839f8945bdb0ac657f88652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 1103387826}
   _menuOpsiMenang: {fileID: 826670848}
   _menuOpsiKalah: {fileID: 1875777086}
   _tempatPesan: {fileID: 56070711}
+--- !u!95 &1103387826
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103387823}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6e68381d691b69a4684b207e553c74cd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1178644782
 GameObject:
   m_ObjectHideFlags: 0
