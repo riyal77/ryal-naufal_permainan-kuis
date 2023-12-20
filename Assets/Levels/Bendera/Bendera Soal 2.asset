@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 382488c01ee9d4348899c59d0f273c7b, type: 3}
-  m_Name: Soal 1
+  m_Name: Bendera Soal 2
   m_EditorClassIdentifier: 
   pertanyaan: Bendera negara manakah ini?
-  hint: {fileID: 21300000, guid: e9d9408aab5f4cd419b029599a8a0e6b, type: 3}
+  hint: {fileID: 21300000, guid: 204fdcb4f4aca4748b97f12c6dde0c88, type: 3}
+  levelIndex: 1
   _opsiJawaban:
-  - jawaban: Senegal
+  - jawaban: Rusia
     jawabanBenar: 0
-  - jawaban: Kuwait
+  - jawaban: Venezuela
     jawabanBenar: 0
-  - jawaban: Suriah
+  - jawaban: Nepal
     jawabanBenar: 0
-  - jawaban: Yaman
+  - jawaban: Korea Utara
     jawabanBenar: 1

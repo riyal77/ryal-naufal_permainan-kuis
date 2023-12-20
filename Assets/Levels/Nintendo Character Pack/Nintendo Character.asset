@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: daa607aa04741f344beff2773f75f7dd, type: 3}
-  m_Name: Level Pack 1
+  m_Name: Nintendo Character
   m_EditorClassIdentifier: 
   _isiLevel:
   - {fileID: 11400000, guid: dc5b3f3d0f255a347aa198cfb726ed31, type: 2}

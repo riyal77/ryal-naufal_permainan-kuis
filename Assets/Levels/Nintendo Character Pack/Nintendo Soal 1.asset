@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 382488c01ee9d4348899c59d0f273c7b, type: 3}
-  m_Name: Soal 4
+  m_Name: Nintendo Soal 1
   m_EditorClassIdentifier: 
-  pertanyaan: Gambar apa ini?
-  hint: {fileID: 21300000, guid: 13b5e50f946863b4688ddb743a44ea92, type: 3}
+  pertanyaan: Siapakah nama karakter ini?
+  hint: {fileID: 21300000, guid: 35c0098505e79fc4f90514ca525a9ce2, type: 3}
+  levelIndex: 0
   _opsiJawaban:
-  - jawaban: Sabuk Pengaman
+  - jawaban: Pluto
     jawabanBenar: 0
-  - jawaban: Matahari
+  - jawaban: Wapol
+    jawabanBenar: 0
+  - jawaban: Mario
     jawabanBenar: 1
-  - jawaban: Kuning
-    jawabanBenar: 0
-  - jawaban: Toko Baju
+  - jawaban: Luigi
     jawabanBenar: 0

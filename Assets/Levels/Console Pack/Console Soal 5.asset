@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 382488c01ee9d4348899c59d0f273c7b, type: 3}
+  m_Name: Console Soal 5
+  m_EditorClassIdentifier: 
+  pertanyaan: Apa nama konsol game ini?
+  hint: {fileID: 21300000, guid: 4cc76c129c3b193448a84a55f59246b3, type: 3}
+  levelIndex: 0
+  _opsiJawaban:
+  - jawaban: Magnavox Odyssey
+    jawabanBenar: 0
+  - jawaban: Playdate 2000
+    jawabanBenar: 0
+  - jawaban: Sega Master System
+    jawabanBenar: 0
+  - jawaban: Atari 2600
+    jawabanBenar: 1

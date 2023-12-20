@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: daa607aa04741f344beff2773f75f7dd, type: 3}
-  m_Name: Level Pack 2
+  m_Name: Video Game Console
   m_EditorClassIdentifier: 
   _isiLevel:
-  - {fileID: 11400000, guid: c923e6ad329cead40891fedfdffbe6e1, type: 2}
-  - {fileID: 11400000, guid: c41f76b2830ae75479a0d97924836487, type: 2}
-  - {fileID: 11400000, guid: dc5b3f3d0f255a347aa198cfb726ed31, type: 2}
-  - {fileID: 11400000, guid: 7f01ca3bc5fe47b498596639baebf0ae, type: 2}
-  - {fileID: 11400000, guid: 4a578d97f4bc94a41828b3588e30252f, type: 2}
+  - {fileID: 11400000, guid: 7cb79be39022b5a41aa715c063de39de, type: 2}
+  - {fileID: 11400000, guid: 6e58f67488818204eb62fa7fe4e77309, type: 2}
+  - {fileID: 11400000, guid: c75b50bba32f5b646817fdfe0ea2df4a, type: 2}
+  - {fileID: 11400000, guid: 91513b8c9e955f24a910a4ba974c2217, type: 2}
+  - {fileID: 11400000, guid: 1d11a80ff6fcf7a4f94c03b8606e7bf2, type: 2}
   _harga: 100
